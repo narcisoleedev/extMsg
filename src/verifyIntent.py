@@ -30,4 +30,3 @@ def recursive(d):
             if result:
                 return result
     return None
-    
