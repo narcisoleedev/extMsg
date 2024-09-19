@@ -16,11 +16,15 @@ def msgToTxt():
         if pd.notna(r['Message']): #Se a mensagem não for vazia ele adiciona ao array de msgs
             if(r['TipoMsg']=='payload'): #Se for payload ele faz o tratamento e adiciona a msgs
                 match = re.findall(r"'(.*?)'", r['Message'])
+                matchVar = re.findall(r"([^\s,]+),\s*'([^']+)'", r['Message'])
+                print(matchVar)
                 if match: #Se não retornar nada:
                     for m in match: 
                         if m!='text': #Se for 
-                            print(m)
                             msgs.append(m)
+                else:
+                    for m in matchVar:  
+                        msgs.append(m)
             else: #Adiciona as messages ao array
                 msgs.append(r['Message'])
     #print(msgs)
@@ -28,5 +32,5 @@ def msgToTxt():
     with open('./msg.txt', 'w') as f:
         for msg in msgs:
             cleaned_msg = msg.strip()
-            if cleaned_msg:
+            if cleaned_msg and ('\n' not in cleaned_msg):
                 f.write(cleaned_msg + '\n\n')
