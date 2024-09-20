@@ -15,3 +15,5 @@ Ele gerará, arquivos csv e xlsx com tabelas com **todas os outputs textuais** e
 Teoricamente esse programa funciona para todos os fluxos de bot, entretanto, deve-se adicionar as intents faltantes no dicionário de tipoIntent no programa extractMessage.py.
 
 Não deu pra comentar o código de verifyIntents, mas ele não é essencial para o plot.
+
+Ainda tem muitas coisas que é possível fazer extraindo do bot, e também muitas partes deveriam ser feitas de outra maneira (como adicionar as pastas pelo código em vez de manualmente), mas isso será feito futuramente.
