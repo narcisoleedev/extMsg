@@ -34,3 +34,4 @@ def msgToTxt():
             cleaned_msg = msg.strip()
             if cleaned_msg and ('\n' not in cleaned_msg):
                 f.write(cleaned_msg + '\n\n')
+
