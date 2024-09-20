@@ -1,4 +1,3 @@
-import json
 import pandas as pd
 import re
 
@@ -87,11 +86,11 @@ def iterateIntent(data): #Itera sobre o dicionário do JSON
             tipoBloco = tipoIntent[b['data']['intentType']]
             recursive(b, group, entente, tipoBloco)
 
-    #Salva os arquivos em csv
-    df.to_csv('./msg.csv', sep='|', index=False) 
-    dfRequest.to_csv('./req.csv', sep='|', index=False) 
-    df.to_excel('./msg.xlsx', index=False) 
-    dfRequest.to_excel('./req.xlsx', index=False) 
+    #Salva os arquivos em csv ou excel
+    df.to_csv('./out/csv/msg.csv', sep='|', index=False) 
+    dfRequest.to_csv('./out/csv/req.csv', sep='|', index=False) 
+    df.to_excel('./out/excel/msg.xlsx', index=False) 
+    dfRequest.to_excel('./out/excel/req.xlsx', index=False) 
 
 
 

@@ -3,3 +3,9 @@
 *.csv
 *.xlsx
 *.txt
+*.json
+src/__pycache__/
+
+#Others:
+
+./src/graph.py

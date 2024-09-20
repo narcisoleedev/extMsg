@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def verifyIntent(data):
     for g in data["groups"]:
         countDict = {}
-        for b in (((g["blocks"])['drawflow'])['Home'])['data'].values():  
+        for b in (((g["blocks"])['drawflow'])['Home'])['data'].values(): 
             key = recursive(b)
             if key:
                 countDict[key] = countDict.get(key, 0) + 1
