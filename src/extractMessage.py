@@ -2,17 +2,23 @@ import pandas as pd
 import re
 
 tipoIntent = {
-    120: "Lógica",
-    110: "Pergunta",
-    100: "Mensagem",
+    1: "Extração de variável",
+    2: "bloco filho de extração de variável",
+    4: "notifica",
     7: "Envio",
-    131: "Carrosel Vertical",
-    130: "Múltipla Escolha",
-    170: "Teste A/B",
     8: "Boas-vindas",
     9: "Não entendi",
     10: "Cancelar",
-    200: "Contexto aberto"} #Mapeia as siglas com os nomes dos blocos
+    11: "Bloco extração de variável outros",
+    100: "Mensagem",
+    110: "Pergunta",
+    111: "não sei",
+    120: "Lógica",
+    130: "Múltipla Escolha",
+    131: "Carrossel Vertical",
+    170: "Teste A/B",
+    200: "Contexto aberto",
+    303: "Bloco de lógica novo"} #Mapeia as siglas com os nomes dos blocos
 
 getMsg = ['message', 'messageDidNotUnderstand', 'questions', 'title', 'payload'] #Tipos de chaves de mensagem
 
